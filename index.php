@@ -17,16 +17,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-
-	<div class="background-image">
-		<?php
-		get_template_part('./media/background-html');
-		?>
-	</div>
-
 	<?php
-
-
 	if (have_posts()) :
 
 		if (is_home() && ! is_front_page()) :
