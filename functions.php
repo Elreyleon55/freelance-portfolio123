@@ -52,6 +52,9 @@ function freelance_portfolio123_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'freelance-portfolio123'),
+			'general-mobile-menu' => esc_html__('general-mobile-menu', 'freelance-portfolio'),
+			'services-mobile-menu' => esc_html__('services-mobile-menu', 'freelance-portfolio'),
+			'contact-mobile-menu' => esc_html__('contact-mobile-menu', 'freelance-portfolio'),
 		)
 	);
 

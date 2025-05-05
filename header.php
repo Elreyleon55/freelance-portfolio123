@@ -28,34 +28,43 @@
 
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if (is_front_page() && is_home()) :
-				?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-				else :
-				?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-				endif;
-				$freelance_portfolio123_description = get_bloginfo('description', 'display');
-				if ($freelance_portfolio123_description || is_customize_preview()) :
-				?>
-					<p class="site-description"><?php echo $freelance_portfolio123_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-																			?></p>
-				<?php endif; ?>
+				<?php get_template_part('./media/Logo-studios-1') ?>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'freelance-portfolio123'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php get_template_part('./media/custom-hamburger') ?></button>
+				<section id="primary-menu" class="mobile-navigation">
+
+					<div class="mobile-menu-general">
+						<h2>General</h2>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'general-mobile-menu',
+							)
+						);
+						?>
+					</div>
+					<div class="mobile-menu-services">
+						<h2>Services</h2>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'services-mobile-menu',
+							)
+						);
+						?>
+					</div>
+					<div class="mobile-menu-contact">
+						<h2>Contact Us</h2>
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'contact-mobile-menu',
+							)
+						);
+						?>
+					</div>
+				</section>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
