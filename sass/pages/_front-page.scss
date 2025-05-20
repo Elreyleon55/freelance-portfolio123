@@ -1,25 +1,145 @@
+
 .front-page{
-	position: relative;
-}
-.front-page-design{
-	position: relative;
+	display: grid;
+	grid-template-columns: 3% 94% 3%;
+	grid-template-areas: 
+	". page-content ."
+	". page-content-about ."
+	". show-case-work ."
+	". services-content ."
+	". contact-form .";
+	margin-bottom: 40%;
 }
 
-//about section
+.intro-art{
+	grid-area: page-content;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas: 
+	"left-art"
+	"right-art";
+	justify-content: center;
+	row-gap: 10%;
+	margin-bottom: 25%;
+}
 
-.about-section{
-	position: absolute;
-	
-	.about-conatiner{
-			ul{
-				margin: 0;
-			}
+.inner-intro-art-left{
+	grid-area: left-art;
+	svg{
+		width: 100%;
+		height: 100%;
+	}
+}
+.inner-intro-art-right{
+	grid-area: right-art;
+	svg{
+		width: 100%;
+		height: 100%;
 	}
 }
 
 
-//spacer
+//about section
 
-.portfolio-section{
-	height: 400rem;
+.inner-text-right-container-desktop{
+	display: none;
+}
+
+.about-section{
+	margin-bottom: 20%;
+	grid-area: page-content-about;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-areas: "left-content"
+	"right-content";
+	row-gap: 10%;
+}
+
+.text-about-left{
+	grid-area: left-content;
+	width: 90%;
+	height: 100%;
+	text-align: justify;
+	h2{
+		font-size: 100%;
+	}
+	p{
+		font-size: 100%;
+	}
+}
+
+.promo-text-right{
+	grid-area: right-content;
+	.inner-text-right-container-mobile{
+		svg{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+//Show case work
+
+.show-case-work{
+	grid-area: show-case-work;
+	position: relative;
+	
+	img{
+		position: relative;
+		z-index: 10;
+	}
+	
+	svg{
+		position: absolute;
+		top: 0;
+		width: 39rem;
+		height: 100%;
+		transform: translateX(-30%);
+	}
+}
+
+
+//services section
+
+.services{
+grid-area: services-content;
+.services-tittle{
+	h2{
+		font-size: 13vw;
+		margin-bottom: 0.2rem;
+	}
+	p{
+		margin-top: 0;
+		margin-bottom: 2rem;
+	}
+}
+.services-container{
+	
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	.actual-services{
+		border: $bordercolorblue 1px solid;
+		padding: 0.5rem;
+		width: 100%;
+		h3{
+		margin: 0 0;
+
+		}
+		p{
+		margin-bottom: 0;
+		margin-top: 0.1rem;
+		}
+	}
+}
+
+}
+
+//contact form section
+
+.contact-from{
+grid-area: contact-form;
+input{
+	width: 50%;
+}
 }
