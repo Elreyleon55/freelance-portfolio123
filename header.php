@@ -33,8 +33,10 @@
 
 			<nav id="site-navigation" class="main-navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php get_template_part('./media/custom-hamburger') ?></button>
-				<section id="primary-menu" class="mobile-navigation">
-
+				<section id="primary-menu" class="mobile-navigation" style="background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/media/backdrop-mobile-menu.svg');
+				background-size: 100%;
+    		background-repeat: no-repeat;
+				">
 					<div class="mobile-menu-general">
 						<h2>General</h2>
 						<?php

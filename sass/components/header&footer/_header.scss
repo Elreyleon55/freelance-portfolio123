@@ -1,4 +1,18 @@
 .site-header{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1% 3%;
+  .site-branding{
+    svg{
+      width: 70%;
+    }
+  }
+}
+
+//hambuger icon
+
+.menu-toggle{
+  background-color: transparent;
+  border: none;
 }

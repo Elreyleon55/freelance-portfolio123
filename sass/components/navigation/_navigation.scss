@@ -1,4 +1,4 @@
-.desktop-navigation {
+p.desktop-navigation {
 	display: none;
 }
 
@@ -78,19 +78,6 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle-mobile-mobile {
-		display: none;
-	}
-
-	.desktop-navigation {
-		display: block;
-	}
-	.mobile-navigation{
-		display: none;
-	}
-}
 
 .comment-navigation,
 .posts-navigation,
@@ -118,10 +105,39 @@
 
 .mobile-navigation{
 	position: absolute;
-	top: 16%;
+	top: 18%;
 	left: 0;
 	width: 100%;
 	height: 100vh;
 	z-index: 2;
-	background-image: ;
+	padding: 0 5%;
+	h2{
+		font-size: 10vw;
+	}
+	a{
+		font-size:  5vw;
+		color: $colorForTextBlack;
+	}
+	ul{
+		list-style-type: disclosure-closed;
+	}
+	.mobile-menu-general{
+		h2{
+			margin-top: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.menu-toggle-mobile-mobile {
+		display: none;
+	}
+
+	.desktop-navigation {
+		display: block;
+	}
+	.mobile-navigation{
+		display: none;
+	}
 }
